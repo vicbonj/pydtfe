@@ -53,7 +53,7 @@ def map_dtfe(x,y,z,size):
     the_pool.close()
     x_m=np.linspace(np.min(x),np.max(x),size)
     y_m=np.linspace(np.min(y),np.max(y),size)
-    z_m=np.linspace(np.min(z1),np.max(z1),size)
+    z_m=np.linspace(np.min(z),np.max(z),size)
     x_m,y_m,z_m=np.meshgrid(x_m,y_m,z_m)
     grid=griddata(tab,d,(x_m,y_m,z_m),method='linear')
     grid[np.isnan(grid)]=0
