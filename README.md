@@ -1,11 +1,12 @@
-# density
+# density maps 2d and 3d
 
 Author: Victor Bonjean
+
 Mail: victor.bonjean@obspm.fr
 
 
 
-A code to perform density maps in 2d or in 3d with a distribution of points in inputs.
+A code to perform density maps in 2d or in 3d with a distribution of points in inputs, using the Delaunay Tesselation Field Estimator (PhD thesis: Schaap, W. E. (2007). DTFE: the Delaunay Tessellation Field Estimator s.n.).
 
 
 - Download the ipython notebook and the file pydtfe.py and put it in the same folder.
