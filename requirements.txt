@@ -3,4 +3,4 @@ scipy>=0.18.1
 multiprocessing>=0.70a1
 astropy>=1.2.1
 matplotlib>=1.5.1
-jupyter>=4.2.0
+
