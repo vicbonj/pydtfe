@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/vicbonj/density.svg?branch=master)](https://travis-ci.org/vicbonj/density)
+
 # density maps 2d and 3d
 
 Author: Victor Bonjean
