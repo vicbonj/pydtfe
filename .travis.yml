@@ -6,4 +6,6 @@ python:
 install:
 - pip install -r requirements.txt
 
-script: py.test
+script: 
+- py.test
+- py.test --cov
