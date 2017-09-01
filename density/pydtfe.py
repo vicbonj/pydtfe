@@ -3,7 +3,6 @@ from scipy.spatial import Delaunay
 from itertools import repeat
 from multiprocessing import Pool
 from scipy.interpolate import griddata
-from astropy.cosmology import Planck15
 
 __all__ = ["map_dtfe2d", "map_dtfe3d"]
 
