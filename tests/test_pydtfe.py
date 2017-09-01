@@ -1,4 +1,4 @@
-from pydtfe import map_dtfe2d, map_dtfe3d
+from density.pydtfe import map_dtfe2d, map_dtfe3d
 import numpy as np
 import numpy.testing as npt
 

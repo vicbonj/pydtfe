@@ -2,5 +2,9 @@
 .coverage
 *.py[co]
 *~
+*/*~
 *#
 scripts/.ipynb_checkpoints/
+build/
+dist/
+pydtfe.egg-info/
