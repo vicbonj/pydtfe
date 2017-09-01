@@ -1,5 +1,5 @@
 import os
-from setuptools import setup
+from setuptools import find_packages, setup
 
 # Utility function to read the README file.
 # Used for the long_description.  It's nice, because now 1) we have a top level
@@ -16,6 +16,6 @@ setup(
     description = ("Create DTFE density map in 2 and 3 dimensions"),
     keywords = "example documentation tutorial",
     url = "https://github.com/vicbonj/density",
-    packages=['density'],
+    packages=find_packages(),
     long_description=read('README.md'),
 )
