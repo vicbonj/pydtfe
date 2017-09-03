@@ -1,2 +1,3 @@
-#from .version import __version__
-#from .pydtfe import *
+__version__ = "0.0.1"
+
+from pydtfe import *
