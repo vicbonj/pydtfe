@@ -1,4 +1,4 @@
-from density.pydtfe import *
+from pydtfe.pydtfe import *
 import numpy as np
 import numpy.testing as npt
 
