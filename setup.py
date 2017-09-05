@@ -16,6 +16,6 @@ setup(
     description = "Create DTFE density map in 2 and 3 dimensions",
     packages=find_packages(),
     include_package_data=True,
-    url = "https://github.com/vicbonj/density",
+    url = "https://github.com/vicbonj/pydtfe",
     long_description=open('README.md').read(),
 )
