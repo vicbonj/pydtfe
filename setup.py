@@ -1,7 +1,7 @@
 import os
 from setuptools import find_packages, setup
 
-import density
+import pydtfe
 
 # Utility function to read the README file.
 # Used for the long_description.  It's nice, because now 1) we have a top level
@@ -9,8 +9,8 @@ import density
 # string in below ...
 
 setup(
-    name = 'density',
-    version=density.__version__,
+    name = 'pydtfe',
+    version=pydtfe.__version__,
     author = "Victor Bonjean",
     author_email = "victor.bonjean@obspm.fr",
     description = "Create DTFE density map in 2 and 3 dimensions",
