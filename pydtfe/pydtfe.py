@@ -6,13 +6,15 @@ from scipy.interpolate import griddata
 
 __all__ = ["map_dtfe2d", "map_dtfe3d"]
 
+
 def how_many(tri, num_points):
     there_are = np.where(tri.simplices == num_points)[0]
     return there_are
 
 
 def area_triangle(points):
-    return 0.5 * np.abs(np.dot(points[:, 0], np.roll(points[:, 1], 1)) - np.dot(points[:, 1], np.roll(points[:, 0], 1)))
+    return 0.5 * np.abs(np.dot(points[:, 0], np.roll(points[:, 1], 1)) -
+                        np.dot(points[:, 1], np.roll(points[:, 0], 1)))
 
 
 def area_delaunay(inputs):
@@ -30,7 +32,12 @@ def get_areas(tri, the_pool):
 
 
 def vol_tetrahedron(points):
-    return abs(np.dot((points[0] - points[3]), np.cross((points[1] - points[3]), (points[2] - points[3])))) / 6.
+    return abs(
+        np.dot(
+            (points[0] - points[3]),
+            np.cross(
+                (points[1] - points[3]),
+                (points[2] - points[3])))) / 6.
 
 
 def vol_delaunay(inputs):
