@@ -84,32 +84,42 @@ def densities2d(tri, the_pool, areas):
     return np.array(dens)
 
 
-def map_dtfe3d(x, y, z, size):
+def map_dtfe3d(x, y, z, xsize, ysize=None, zsize=None):
     tab = np.vstack((x, y, z)).T
     tri = Delaunay(tab)
     the_pool = Pool()
     volumes = get_volumes(tri, the_pool)
     d = densities3d(tri, the_pool, volumes)
     the_pool.close()
-    x_m = np.linspace(np.min(x), np.max(x), size)
-    y_m = np.linspace(np.min(y), np.max(y), size)
-    z_m = np.linspace(np.min(z), np.max(z), size)
+    if (ysize is None) & (zsize is None):
+        size = xsize
+        x_m = np.linspace(np.min(x), np.max(x), size)
+        y_m = np.linspace(np.min(y), np.max(y), size)
+        z_m = np.linspace(np.min(z), np.max(z), size)
+    else:
+        x_m = np.linspace(np.min(x), np.max(x), xsize)
+        y_m = np.linspace(np.min(y), np.max(y), ysize)
+        z_m = np.linspace(np.min(z), np.max(z), zsize)
     x_m, y_m, z_m = np.meshgrid(x_m, y_m, z_m)
     grid = griddata(tab, d, (x_m, y_m, z_m), method='linear')
     grid[np.isnan(grid)] = 0
     return grid
 
 
-def map_dtfe2d(x, y, size):
+def map_dtfe2d(x, y, xsize, ysize=None):
     tab = np.vstack((x, y)).T
     tri = Delaunay(tab)
     the_pool = Pool()
     areas = get_areas(tri, the_pool)
     d = densities2d(tri, the_pool, areas)
     the_pool.close()
-    x_m = np.linspace(np.min(x), np.max(x), size)
-    y_m = np.linspace(np.min(y), np.max(y), size)
+    if ysize is None:
+        size = xsize
+        x_m = np.linspace(np.min(x), np.max(x), size)
+        y_m = np.linspace(np.min(y), np.max(y), size)
+    else:
+        x_m = np.linspace(np.min(x), np.max(x), xsize)
+        y_m = np.linspace(np.min(y), np.max(y), ysize)
     x_m, y_m = np.meshgrid(x_m, y_m)
     grid = griddata(tab, d, (x_m, y_m), method='linear')
-    grid[np.isnan(grid)] = 0
     return grid
