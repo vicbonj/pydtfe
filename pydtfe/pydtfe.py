@@ -109,7 +109,7 @@ def map_dtfe3d(x, y, z, xsize, ysize=None, zsize=None):
 
     Returns
     -------
-    grid : An (xsize, ysize, zsize) shape array
+    grid : An (xsize, ysize, zsize)-shaped array
     The density cube in 3d
 
     """
@@ -151,7 +151,7 @@ def map_dtfe2d(x, y, xsize, ysize=None):
     Returns
     -------
 
-    grid : An (xsize, ysize) shape array
+    grid : An (xsize, ysize)-shaped array
     The density map in 2d
 
     """
