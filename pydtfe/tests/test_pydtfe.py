@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+
 from pydtfe.pydtfe import *
 import numpy as np
 import numpy.testing as npt
@@ -27,6 +31,9 @@ def create_hexa_2d(shape):
 
 
 def test_map_dtfe2d():
+
+    """Generate an uniform 2d point distribution"""
+
     size = 100
     x, y = create_hexa_2d(size)
     grid = map_dtfe2d(x, y, size)
@@ -50,6 +57,9 @@ def create_hexalike_3d(shape):
 
 
 def test_map_dtfe3d():
+
+    """Generate an uniform 3d point distribution"""
+
     size = 10
     x, y, z = create_hexalike_3d(size)
     grid = map_dtfe3d(x, y, z, size)

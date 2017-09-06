@@ -8,7 +8,7 @@ Mail: victor.bonjean@obspm.fr
 
 
 
-A code to perform density maps in 2d or in density cubes in 3d with a distribution of points in inputs, using the Delaunay Tesselation Field Estimator (PhD thesis: Schaap, W. E. (2007). DTFE: the Delaunay Tessellation Field Estimator s.n.), and scipy (http://www.scipy.org/).
+A code to perform very easily and quickly density maps in 2d or in density cubes in 3d with a distribution of points in inputs, using the Delaunay Tesselation Field Estimator (PhD thesis: Schaap, W. E. (2007). DTFE: the Delaunay Tessellation Field Estimator s.n.), and scipy (http://www.scipy.org/).
 
 
 - use "git clone https://github.com/vicbonj/pydtfe.git"

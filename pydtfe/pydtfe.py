@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+
 import numpy as np
 from scipy.spatial import Delaunay
 from itertools import repeat
@@ -85,6 +89,29 @@ def densities2d(tri, the_pool, areas):
 
 
 def map_dtfe3d(x, y, z, xsize, ysize=None, zsize=None):
+    """
+    Create a 3d density cube from given x, y and z points in a volume
+
+    Parameters
+    ----------
+    x : An N-length one dimensional array.
+    The x coordinates of the point distribution.
+    y : An N-length one dimensional array.
+    The y coordinates of the point distribution.
+    z : An N-length one dimensional array.
+    The z coordinates of the point distribution.
+    xsize : Integer.
+    The x dimension of the cube.
+    ysize : Integer, optional.
+    The y dimension of the cube. If ysize is not given, it assumes that the x, y and z axis share the same dimension.
+    zsize : Integer, optional.
+    The z dimension of the cube. If zsize is not given, it assumes that the x, y and z axis share the same dimension.
+
+    Returns
+    -------
+    grid :
+
+    """
     tab = np.vstack((x, y, z)).T
     tri = Delaunay(tab)
     the_pool = Pool()
@@ -102,11 +129,26 @@ def map_dtfe3d(x, y, z, xsize, ysize=None, zsize=None):
         z_m = np.linspace(np.min(z), np.max(z), zsize)
     x_m, y_m, z_m = np.meshgrid(x_m, y_m, z_m)
     grid = griddata(tab, d, (x_m, y_m, z_m), method='linear')
-    grid[np.isnan(grid)] = 0
     return grid
 
 
 def map_dtfe2d(x, y, xsize, ysize=None):
+    """
+    Create a 2d density map from given x and y points in a plan
+
+    Parameters
+    ----------
+    x :
+    y :
+    xsize :
+    ysize : (optional)
+
+    Returns
+    -------
+
+    grid :
+
+    """
     tab = np.vstack((x, y)).T
     tri = Delaunay(tab)
     the_pool = Pool()
