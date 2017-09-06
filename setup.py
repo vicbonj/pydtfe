@@ -16,5 +16,6 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     url="https://github.com/vicbonj/pydtfe",
+    download_url="https://github.com/vicbonj/pydtfe/archive/0.1.tar.gz",
     long_description=open('README.md').read(),
 )
