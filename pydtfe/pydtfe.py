@@ -94,22 +94,23 @@ def map_dtfe3d(x, y, z, xsize, ysize=None, zsize=None):
 
     Parameters
     ----------
-    x : An N-length one dimensional array.
-    The x coordinates of the point distribution.
-    y : An N-length one dimensional array.
-    The y coordinates of the point distribution.
-    z : An N-length one dimensional array.
-    The z coordinates of the point distribution.
-    xsize : Integer.
-    The x dimension of the cube.
-    ysize : Integer, optional.
-    The y dimension of the cube. If ysize is not given, it assumes that the x, y and z axis share the same dimension.
-    zsize : Integer, optional.
-    The z dimension of the cube. If zsize is not given, it assumes that the x, y and z axis share the same dimension.
+    x : An N-length one dimensional array
+    The x coordinates of the point distribution
+    y : An N-length one dimensional array
+    The y coordinates of the point distribution
+    z : An N-length one dimensional array
+    The z coordinates of the point distribution
+    xsize : Integer
+    The x dimension of the cube
+    ysize : Integer, optionale
+    The y dimension of the cube. If ysize is not given, it assumes that the x, y and z axis share the same dimension
+    zsize : Integer, optional
+    The z dimension of the cube. If zsize is not given, it assumes that the x, y and z axis share the same dimension
 
     Returns
     -------
-    grid :
+    grid : An (xsize, ysize, zsize) shape array
+    The density cube in 3d
 
     """
     tab = np.vstack((x, y, z)).T
@@ -138,15 +139,20 @@ def map_dtfe2d(x, y, xsize, ysize=None):
 
     Parameters
     ----------
-    x :
-    y :
-    xsize :
-    ysize : (optional)
+    x : An N-length one dimensional array
+    The x coordinates of the point distribution
+    y : An N-length one dimensional array
+    The y coordinates of the point distribution
+    xsize : Integer
+    The x dimension of the map
+    ysize : Integer, optional
+    The y dimension of the map. If ysize is not given, it assumes that the x and y axis share the same dispension
 
     Returns
     -------
 
-    grid :
+    grid : An (xsize, ysize) shape array
+    The density map in 2d
 
     """
     tab = np.vstack((x, y)).T
