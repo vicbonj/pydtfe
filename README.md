@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/76566234.svg)](https://zenodo.org/badge/latestdoi/76566234) [![Build Status](https://travis-ci.org/vicbonj/pydtfe.svg?branch=master)](https://travis-ci.org/vicbonj/pydtfe) [![Code Health](https://landscape.io/github/vicbonj/pydtfe/master/landscape.svg?style=flat)](https://landscape.io/github/vicbonj/pydtfe/master)
+[![DOI](https://zenodo.org/badge/76566234.svg)](https://zenodo.org/badge/latestdoi/76566234) [![Build Status](https://travis-ci.org/vicbonj/pydtfe.svg?branch=master)](https://travis-ci.org/vicbonj/pydtfe) [![Code Health](https://landscape.io/github/vicbonj/density/master/landscape.svg?style=flat)](https://landscape.io/github/vicbonj/density/master)
 
 # density maps 2d and density cubes 3d
 
