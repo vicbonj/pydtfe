@@ -133,7 +133,7 @@ def map_dtfe3d(x, y, z, xsize, ysize=None, zsize=None):
     return grid
 
 
-def map_dtfe2d(x, y, xsize, ysize=None):
+def map_dtfe2d(x, y, xsize=None, ysize=None):
     """
     Create a 2d density map from given x and y points in a plan
 
@@ -143,15 +143,17 @@ def map_dtfe2d(x, y, xsize, ysize=None):
     The x coordinates of the point distribution
     y : An N-length one dimensional array
     The y coordinates of the point distribution
-    xsize : Integer
-    The x dimension of the map
+    xsize : Integer, optional
+    The x dimension of the map. If xsize if not given, the algorithm compute a best resolution in x and y,
+    taking statistically a pixel size under ten times the square root of the 5 sigma area. The algorithm
+    try to give the same resolution in x and y
     ysize : Integer, optional
-    The y dimension of the map. If ysize is not given, it assumes that the x and y axis share the same dispension
+    The y dimension of the map. If ysize is not given, ysize take the value of xsize, if given
 
     Returns
     -------
 
-    grid : An (xsize, ysize)-shaped array
+    grid : An 2 dimensional array
     The density map in 2d
 
     """
@@ -161,7 +163,16 @@ def map_dtfe2d(x, y, xsize, ysize=None):
     areas = get_areas(tri, the_pool)
     d = densities2d(tri, the_pool, areas)
     the_pool.close()
-    if ysize is None:
+    if (xsize is None) & (ysize is None):
+        if y.max()-y.min() < x.max()-x.min():
+            xsize = int(1/(np.sqrt(1/(np.median(d)+5*np.std(d)))/(10/((y.max()-y.min())/(x.max()-x.min())))))
+            ysize = int(1/(np.sqrt(1/(np.median(d)+5*np.std(d)))/10))
+        else:
+            xsize = int(1/(np.sqrt(1/(np.median(d)+5*np.std(d)))/10))
+            ysize = int(1/(np.sqrt(1/(np.median(d)+5*np.std(d)))/(10*((y.max()-y.min())/(x.max()-x.min())))))
+        x_m = np.linspace(np.min(x), np.max(x), xsize)
+        y_m = np.linspace(np.min(y), np.max(y), ysize)
+    if (xisze is not None) & (ysize is None):
         size = xsize
         x_m = np.linspace(np.min(x), np.max(x), size)
         y_m = np.linspace(np.min(y), np.max(y), size)
