@@ -8,3 +8,4 @@ scripts/.ipynb_checkpoints/
 build/
 dist/
 *.egg-info/
+*.ipynb

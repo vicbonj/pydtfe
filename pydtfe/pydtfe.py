@@ -172,7 +172,7 @@ def map_dtfe2d(x, y, xsize=None, ysize=None):
             ysize = int(1/(np.sqrt(1/(np.median(d)+5*np.std(d)))/(10*((y.max()-y.min())/(x.max()-x.min())))))
         x_m = np.linspace(np.min(x), np.max(x), xsize)
         y_m = np.linspace(np.min(y), np.max(y), ysize)
-    if (xisze is not None) & (ysize is None):
+    elif (xsize is not None) & (ysize is None):
         size = xsize
         x_m = np.linspace(np.min(x), np.max(x), size)
         y_m = np.linspace(np.min(y), np.max(y), size)
