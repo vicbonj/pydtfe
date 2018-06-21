@@ -11,7 +11,7 @@ Mail: victor.bonjean@obspm.fr
 A code to perform very easily and quickly density maps in 2d or in density cubes in 3d with a distribution of points in inputs, using the Delaunay Tesselation Field Estimator (PhD thesis: Schaap, W. E. (2007). DTFE: the Delaunay Tessellation Field Estimator s.n.), and scipy (http://www.scipy.org/).
 
 
-- use "git clone https://git.ias.u-psud.fr/ByoPiC/pydtfe.git"
+- use "git clone https://github.com/vicbonj/pydtfe.git"
 - in scripts/, run the notebooks with the command "jupyter-notebook Density_map_*d.ipynb" in 2 or 3d
 - test the examples and create your own maps or cubes with your own distributions of points !
 
