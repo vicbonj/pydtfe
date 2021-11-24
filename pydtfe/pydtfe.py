@@ -3,7 +3,6 @@
 
 import numpy as np
 from scipy.spatial import Delaunay
-from multiprocessing import Pool
 from scipy.interpolate import griddata
 import time
 import matplotlib.pyplot as plt
