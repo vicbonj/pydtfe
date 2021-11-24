@@ -12,7 +12,7 @@ A code to perform very easily and quickly density maps in 2d or in density cubes
 
 
 - use "git clone https://github.com/vicbonj/pydtfe.git"
-- in scripts/, run the notebooks with the command "jupyter-notebook Density_map_*d.ipynb" in 2d
+- run the notebooks with the command "jupyter-notebook Density_map_2d.ipynb"
 - test the examples and create your own maps or cubes with your own distributions of points !
 
 
