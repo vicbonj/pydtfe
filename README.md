@@ -6,7 +6,7 @@ Author: Victor Bonjean
 
 Mail: victor.bonjean40@gmail.com
 
-
+- This is the version 2 of pyDTFE, 100 times faster than the previous version -
 
 A code to perform very easily and quickly density maps in 2d or in density cubes in 3d with a distribution of points in inputs, using the Delaunay Tesselation Field Estimator (PhD thesis: Schaap, W. E. (2007). DTFE: the Delaunay Tessellation Field Estimator s.n.), and scipy (http://www.scipy.org/).
 
