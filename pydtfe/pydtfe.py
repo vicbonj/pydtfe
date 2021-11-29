@@ -14,7 +14,6 @@ __all__ = ["Pydtfe"]
 class Pydtfe:
 
     def __init__(self, x, y, xmin=None, xmax=None, ymin=None, ymax=None, xsize=500, ysize=500, weights=None):
-        t0 = time.time()
         self.x = x
         self.y = y
         if xmin is None:
@@ -38,18 +37,9 @@ class Pydtfe:
         self.weights = weights
         self.tab = np.vstack((self.x, self.y)).T
         self.tri = Delaunay(self.tab)
-        t1 = time.time()
-        print('init:', t1 - t0)
         self.comp_areas()
-        t2 = time.time()
-        print('areas:', t2 - t1)
         self.comp_densities()
-        t3 = time.time()
-        print('densities:', t3 - t2)
         self.make_grid()
-        t4 = time.time()
-        print('make grid:', t4 - t3)
-        print('total:', time.time() - t0)
     
     def area_triangle(self, points):
         return 0.5 * abs(np.linalg.det(points))
