@@ -49,7 +49,7 @@ class Pydtfe:
 
     def comp_densities(self):
         self.sum_areas = np.zeros(len(self.tri.points))
-        ravel = self.tri.vertices.ravel()
+        ravel = self.tri.simplices.ravel()
         for i in range(len(ravel)):
             self.sum_areas[ravel[i]] += self.areas[int(i/3)]
         self.densities = 3 / self.sum_areas
