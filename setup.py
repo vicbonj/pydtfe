@@ -9,9 +9,9 @@ import pydtfe
 
 setup(
     name='pydtfe',
-    version=pydtfe.__version__,
+    version="2.0.0",
     author="Victor Bonjean",
-    author_email="victor.bonjean@obspm.fr",
+    author_email="victor.bonjean40@gmail.com",
     description="Create DTFE density map in 2 and 3 dimensions",
     packages=find_packages(),
     include_package_data=True,
