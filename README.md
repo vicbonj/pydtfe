@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/76566234.svg)](https://zenodo.org/badge/latestdoi/76566234) [![Build Status](https://travis-ci.org/vicbonj/pydtfe.svg?branch=master)](https://travis-ci.org/vicbonj/pydtfe) [![Code Health](https://landscape.io/github/vicbonj/density/master/landscape.svg?style=flat)](https://landscape.io/github/vicbonj/density/master)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![DOI](https://zenodo.org/badge/76566234.svg)](https://zenodo.org/badge/latestdoi/76566234) [![Build Status](https://travis-ci.org/vicbonj/pydtfe.svg?branch=master)](https://travis-ci.org/vicbonj/pydtfe) [![Code Health](https://landscape.io/github/vicbonj/density/master/landscape.svg?style=flat)](https://landscape.io/github/vicbonj/density/master)
 
 # pyDTFE - Delaunay Tesselation Field Estimator
 
