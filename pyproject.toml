@@ -1,3 +1,21 @@
 [build-system]
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "pydtfe"
+version = "2.0"
+authors = [
+  { name="Victor Bonjean", email="victor.bonjean40@gmail.com" },
+]
+description = "A package that performs the Delaunay Tesselation Field Estimator (DTFE) in 2D and 2D."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/vicbonj/pydtfe"
